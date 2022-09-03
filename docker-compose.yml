@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+
+  redis:
+    image: redis:latest
+    ports:
+      - 6379:6379
+  
+  start-kit:
+    image: node:16-alpine
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
+    container_name: start-kit
+    working_dir: /usr/src/app
+    command: ["npm", "run", "start"]
+    expose:
+      - 3000
+      - 9229
+    ports:
+      - 3000:3000
+      - 9229:9229
+    volumes:
+      - ./:/usr/src/app
