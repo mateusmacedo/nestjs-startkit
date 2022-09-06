@@ -1,4 +1,4 @@
-import { MainModule } from '@/main.module'
+import { CommonModule } from '@/common/common.module'
 import { INestApplication } from '@nestjs/common'
 import { Test, TestingModule, TestingModuleBuilder } from '@nestjs/testing'
 import request from 'supertest'
@@ -9,7 +9,7 @@ describe('HealthController (e2e)', () => {
   let app: INestApplication
   beforeAll(async () => {
     const moduleBuilder: TestingModuleBuilder = Test.createTestingModule({
-      imports: [MainModule],
+      imports: [CommonModule],
       controllers: [],
       providers: []
     })

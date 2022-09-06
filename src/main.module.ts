@@ -1,10 +1,7 @@
+import { appConfig } from '@/common/config/app.config'
 import { Module } from '@nestjs/common'
 import { ConfigModule } from '@nestjs/config'
-import { appConfig } from '@/common/config/app.config'
-import { HealthController } from '@/common/controller/health.controller'
-import { HealthService } from '@/common/service/health.service'
-import { HttpModule } from '@nestjs/axios'
-import { TerminusModule } from '@nestjs/terminus'
+import { CommonModule } from '@/common/common.module'
 
 @Module({
   imports: [
@@ -15,10 +12,7 @@ import { TerminusModule } from '@nestjs/terminus'
       cache: true
     }),
     ConfigModule.forFeature(appConfig()),
-    HttpModule,
-    TerminusModule
-  ],
-  controllers: [HealthController],
-  providers: [HealthService]
+    CommonModule
+  ]
 })
 export class MainModule {}
