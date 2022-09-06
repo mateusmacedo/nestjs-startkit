@@ -9,7 +9,7 @@
     "noFallthroughCasesInSwitch": false,
     "incremental": true,
     "outDir": "dist",
-    "rootDirs": ["src"],
+    "rootDirs": ["src", "test"],
     "target": "es2021",
     "sourceMap": true,
     "skipLibCheck": true,
@@ -18,7 +18,8 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "paths": {
-      "@app/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@/test": ["test/*"]
     },
     "strict": true,
     "noImplicitOverride": true,

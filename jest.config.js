@@ -1,7 +1,8 @@
 module.exports = {
   rootDir: '.',
   moduleNameMapper: {
-    '@app/(.*)': '<rootDir>/src/$1'
+    '@/(.*)': '<rootDir>/src/$1',
+    '@/test/(.*)': '<rootDir>/test/$1'
   },
   moduleFileExtensions: ['ts', 'js', 'tsx', 'jsx'],
   preset: 'ts-jest',
