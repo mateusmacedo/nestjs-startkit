@@ -16,6 +16,11 @@ module.exports = {
   coverageThreshold: {
     global: 100
   },
-  collectCoverageFrom: ['<rootDir>/src/**/*.{js,jsx,ts,tsx}', '!<rootDir>/src/**/*.*spec.{js,jsx,ts,tsx}'],
+  collectCoverageFrom: [
+    '<rootDir>/src/**/*.{js,jsx,ts,tsx}',
+    '!<rootDir>/src/**/main.{js,jsx,ts,tsx}',
+    '!<rootDir>/src/**/module.alias.{js,jsx,ts,tsx}',
+    '!<rootDir>/src/**/*.*spec.{js,jsx,ts,tsx}'
+  ],
   clearMocks: true
 }
