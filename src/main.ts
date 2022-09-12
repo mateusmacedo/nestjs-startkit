@@ -4,6 +4,7 @@ import { MainModule } from '@/main.module'
 import { ClassSerializerInterceptor, ValidationPipe, VersioningType } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
 import { DocumentBuilder, SwaggerDocumentOptions, SwaggerModule } from '@nestjs/swagger'
+import helmet from 'helmet'
 
 async function bootstrap() {
   const app = await NestFactory.create(MainModule, { bufferLogs: true })
@@ -12,11 +13,14 @@ async function bootstrap() {
     methods: '*',
     allowedHeaders: '*'
   })
+  app.use(helmet())
   app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)))
   app.useGlobalPipes(
     new ValidationPipe({
-      validationError: { target: true, value: true },
-      whitelist: true
+      forbidUnknownValues: true,
+      whitelist: true,
+      transform: true,
+      forbidNonWhitelisted: true
     })
   )
   app.enableVersioning({
