@@ -11,7 +11,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
 - Você instalou a versão `nodejs16`
-- Você instalou a versão mais recente de `npm`
+- Você instalou a versão mais recente de `yarn`
 - Você tem uma máquina `<Windows / Linux / Mac>`
 
 ## ☕ Clonando e Instalando `<nestjs-starkit>`
@@ -25,7 +25,7 @@ git clone https://github.com/mateusmacedo/nestjs-startkit.git
 Para instalar as dependências `<nestjs-starkit>`, siga estas etapas:
 
 ```bash
-npm run install
+yarn install
 ```
 
 ## ⚙️ Configurando ambiente `<nestjs-starkit>`
@@ -45,34 +45,34 @@ Para usar `<nestjs-starkit>`, siga estas etapas:
 # Unix users
 
 # development
-$ npm run start
+$ yarn start
 
 # watch mode
-$ npm run start:dev
+$ yarn start:dev
 
 # debug watch mode
-$ npm run start:debug
+$ yarn start:debug
 ```
 
 ## Testes
 
 ```bash
 # unit tests
-$ npm run test
+$ yarn test
 
 # e2e tests
-$ npm run test:e2e
+$ yarn test:e2e
 
 # test coverage
-$ npm run test:cov
+$ yarn test:cov
 ```
 
 ## Gerando arquivo de change log
 
 ```bash
-npm run changelog # only changelog file
-npm run changelog:minor # x.y.x
-npm run changelog:major # y.x.x
-npm run changelog:patch # x.x.y
-npm run changelog:alpha # x.x.x-alpha.0
+yarn changelog # only changelog file
+yarn changelog:minor # x.y.x
+yarn changelog:major # y.x.x
+yarn changelog:patch # x.x.y
+yarn changelog:alpha # x.x.x-alpha.0
 ```

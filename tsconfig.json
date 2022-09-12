@@ -19,7 +19,7 @@
     "esModuleInterop": true,
     "paths": {
       "@/*": ["src/*"],
-      "@/test": ["test/*"]
+      "@/test/*": ["test/*"]
     },
     "strict": true,
     "noImplicitOverride": true,
