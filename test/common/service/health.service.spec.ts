@@ -12,6 +12,7 @@ describe('HealthService', () => {
     check: jest.fn().mockImplementation(async () => mockHttpHealthIndicator.pingCheck.mockRejectedValue({}))
   })
   beforeEach(async () => {
+    jest.clearAllMocks()
     const module: TestingModule = await Test.createTestingModule({
       providers: [
         {
