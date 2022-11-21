@@ -1,22 +1,22 @@
 version: "3.7"
 services:
-  mysql:
-    container_name: mysql
-    image: mysql:latest
-    command: --default-authentication-plugin=mysql_native_password
-    expose:
-      - 3306
+  mongo:
+    container_name: mongo
+    image: mongo:latest
     ports:
-      - 3306:3306
-    volumes:
-      - ./docker/database.sql:/docker-entrypoint-initdb.d/init.sql
-      - ./docker/data/mysql/data:/var/lib/mysql
+      - 27017:27017
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MONGO_INITDB_ROOT_USERNAME: mongo
+      MONGO_INITDB_ROOT_PASSWORD: mongo
+    volumes:
+      - ./docker/mongodb-entrypoint.js:/docker-entrypoint-initdb.d/mongodb-entrypoint.js
+      - jc-customers-mongo:/data/db:delegated
 
-  iam:
+    networks:
+      - jcpm-network
+  jc-customers:
     image: node:16-alpine
-    container_name: iam
+    container_name: jc-customers
     working_dir: /usr/src/app
     command: ["npm", "run", "start:debug"]
     expose:
@@ -26,14 +26,13 @@ services:
       - 3000:3000
       - 9229:9229
     volumes:
-      - ./:/usr/src/app:rw
+      - ./:/usr/src/app
+    networks:
+      - jcpm-network
+networks:
+  jcpm-network:
+    external: true
 
-  # iam-prd:
-  #   image: iam:latest
-  #   container_name: iam
-  #   expose:
-  #     - 3000
-  #   ports:
-  #     - 3000:3000
-  #   env_file:
-  #     - .env
+volumes:
+  jc-customers-mongo:
+    driver: local
