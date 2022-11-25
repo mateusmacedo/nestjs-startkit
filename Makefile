@@ -7,6 +7,24 @@ down:
 	docker-compose down
 	docker-compose rm -f
 
+logs:
+	docker-compose logs --follow
+
+bash:
+	make up
+	docker exec -it $(CONTAINER_NAME) sh
+
+lint:
+	make up
+	docker exec -it $(CONTAINER_NAME) npm run lint
+
+build:
+	docker-compose build
+
+.PHONY: database
+database:
+	docker-compose up -d mongo
+
 .PHONY:test
 test:
 	make up
@@ -24,17 +42,3 @@ coverage:
 	make up
 	docker exec -it $(CONTAINER_NAME) npm run test:e2e
 	make down
-
-logs:
-	docker-compose logs --follow
-
-bash:
-	make up
-	docker exec -it $(CONTAINER_NAME) sh
-
-lint:
-	make up
-	docker exec -it $(CONTAINER_NAME) npm run lint
-
-build:
-	docker-compose build
