@@ -1,4 +1,4 @@
-import { HealthService } from '@/common/service/health.service'
+import { HealthService } from '@/common/services/health.service'
 import { HealthCheckService, HttpHealthIndicator } from '@nestjs/terminus'
 import { Test, TestingModule } from '@nestjs/testing'
 import { mock } from 'jest-mock-extended'
