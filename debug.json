@@ -1,0 +1,233 @@
+{
+  "numFailedTestSuites": 2,
+  "numFailedTests": 1,
+  "numPassedTestSuites": 2,
+  "numPassedTests": 4,
+  "numPendingTestSuites": 0,
+  "numPendingTests": 0,
+  "numRuntimeErrorTestSuites": 1,
+  "numTodoTests": 0,
+  "numTotalTestSuites": 4,
+  "numTotalTests": 5,
+  "openHandles": [],
+  "snapshot": {
+    "added": 0,
+    "didUpdate": false,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0
+  },
+  "startTime": 1669347943571,
+  "success": false,
+  "testResults": [
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 2,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1669347946302,
+        "runtime": 2703,
+        "slow": false,
+        "start": 1669347943599
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/home/mateusmacedo/Personal/nestjs-startkit/test/database/config/database.config.spec.ts",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "databaseConfig"
+          ],
+          "duration": 19,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "databaseConfig should have appropriate db configs",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should have appropriate db configs"
+        },
+        {
+          "ancestorTitles": [
+            "databaseConfig"
+          ],
+          "duration": 13,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "databaseConfig should throw a error if appropriate db configs is not present",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should throw a error if appropriate db configs is not present"
+        }
+      ],
+      "failureMessage": null
+    },
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 2,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1669347946991,
+        "runtime": 675,
+        "slow": false,
+        "start": 1669347946316
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/home/mateusmacedo/Personal/nestjs-startkit/test/common/config/app.config.spec.ts",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "appConfig"
+          ],
+          "duration": 23,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "appConfig should have appropriate app configs",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should have appropriate app configs"
+        },
+        {
+          "ancestorTitles": [
+            "appConfig"
+          ],
+          "duration": 11,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "appConfig should throw a error if appropriate app configs is not present",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should throw a error if appropriate app configs is not present"
+        }
+      ],
+      "failureMessage": null
+    },
+    {
+      "leaks": false,
+      "numFailingTests": 1,
+      "numPassingTests": 0,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1669347953141,
+        "runtime": 6146,
+        "slow": true,
+        "start": 1669347946995
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/home/mateusmacedo/Personal/nestjs-startkit/test/main.module.spec.ts",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "MainModule"
+          ],
+          "duration": 5002,
+          "failureDetails": [
+            {
+              "message": "thrown: \"Exceeded timeout of 5000 ms for a hook.\nUse jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test.\""
+            }
+          ],
+          "failureMessages": [
+            "Error: thrown: \"Exceeded timeout of 5000 ms for a hook.\nUse jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test.\"\n    at /home/mateusmacedo/Personal/nestjs-startkit/test/main.module.spec.ts:7:3\n    at _dispatchDescribe (/home/mateusmacedo/Personal/nestjs-startkit/node_modules/jest-circus/build/index.js:105:26)\n    at describe (/home/mateusmacedo/Personal/nestjs-startkit/node_modules/jest-circus/build/index.js:60:5)\n    at Object.<anonymous> (/home/mateusmacedo/Personal/nestjs-startkit/test/main.module.spec.ts:4:1)\n    at Runtime._execModule (/home/mateusmacedo/Personal/nestjs-startkit/node_modules/jest-runtime/build/index.js:1714:24)\n    at Runtime._loadModule (/home/mateusmacedo/Personal/nestjs-startkit/node_modules/jest-runtime/build/index.js:1223:12)\n    at Runtime.requireModule (/home/mateusmacedo/Personal/nestjs-startkit/node_modules/jest-runtime/build/index.js:1047:12)\n    at jestAdapter (/home/mateusmacedo/Personal/nestjs-startkit/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:89:13)\n    at runTestInternal (/home/mateusmacedo/Personal/nestjs-startkit/node_modules/jest-runner/build/runTest.js:411:16)\n    at runTest (/home/mateusmacedo/Personal/nestjs-startkit/node_modules/jest-runner/build/runTest.js:499:34)"
+          ],
+          "fullName": "MainModule should be defined for dev",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "retryReasons": [],
+          "status": "failed",
+          "title": "should be defined for dev"
+        }
+      ],
+      "failureMessage": "  ● MainModule › should be defined for dev\n\n    thrown: \"Exceeded timeout of 5000 ms for a hook.\n    Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test.\"\n\n       5 |   let mainModule: MainModule\n       6 |\n    >  7 |   beforeEach(async () => {\n         |   ^\n       8 |     const moduleRef = await Test.createTestingModule({\n       9 |       imports: [MainModule],\n      10 |       controllers: [],\n\n      at test/main.module.spec.ts:7:3\n      at Object.<anonymous> (test/main.module.spec.ts:4:1)\n"
+    },
+    {
+      "failureMessage": "  ● Test suite failed to run\n\n    \u001b[96msrc/database/models/base.entity.ts\u001b[0m:\u001b[93m1\u001b[0m:\u001b[93m10\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS2303: \u001b[0mCircular definition of import alias 'TTBase'.\n\n    \u001b[7m1\u001b[0m import { TTBase } from './base.entity'\n    \u001b[7m \u001b[0m \u001b[91m         ~~~~~~\u001b[0m\n    \u001b[96msrc/database/models/base.entity.ts\u001b[0m:\u001b[93m1\u001b[0m:\u001b[93m10\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS2459: \u001b[0mModule '\"./base.entity\"' declares 'TTBase' locally, but it is not exported.\n\n    \u001b[7m1\u001b[0m import { TTBase } from './base.entity'\n    \u001b[7m \u001b[0m \u001b[91m         ~~~~~~\u001b[0m\n\n      \u001b[96msrc/database/models/base.entity.ts\u001b[0m:\u001b[93m1\u001b[0m:\u001b[93m10\u001b[0m\n        \u001b[7m1\u001b[0m import { TTBase } from './base.entity'\n        \u001b[7m \u001b[0m \u001b[96m         ~~~~~~\u001b[0m\n        'TTBase' is declared here.\n",
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 0,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 0,
+        "runtime": 0,
+        "slow": false,
+        "start": 0
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testExecError": {
+        "diagnosticText": "\u001b[96msrc/database/models/base.entity.ts\u001b[0m:\u001b[93m1\u001b[0m:\u001b[93m10\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS2303: \u001b[0mCircular definition of import alias 'TTBase'.\n\n\u001b[7m1\u001b[0m import { TTBase } from './base.entity'\n\u001b[7m \u001b[0m \u001b[91m         ~~~~~~\u001b[0m\n\u001b[96msrc/database/models/base.entity.ts\u001b[0m:\u001b[93m1\u001b[0m:\u001b[93m10\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS2459: \u001b[0mModule '\"./base.entity\"' declares 'TTBase' locally, but it is not exported.\n\n\u001b[7m1\u001b[0m import { TTBase } from './base.entity'\n\u001b[7m \u001b[0m \u001b[91m         ~~~~~~\u001b[0m\n\n  \u001b[96msrc/database/models/base.entity.ts\u001b[0m:\u001b[93m1\u001b[0m:\u001b[93m10\u001b[0m\n    \u001b[7m1\u001b[0m import { TTBase } from './base.entity'\n    \u001b[7m \u001b[0m \u001b[96m         ~~~~~~\u001b[0m\n    'TTBase' is declared here.\n",
+        "diagnosticCodes": [
+          2303,
+          2459
+        ]
+      },
+      "testFilePath": "/home/mateusmacedo/Personal/nestjs-startkit/test/database/models/base.entity.spec.ts",
+      "testResults": []
+    }
+  ],
+  "wasInterrupted": false
+}

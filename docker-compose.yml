@@ -9,14 +9,14 @@ services:
       MONGO_INITDB_ROOT_USERNAME: mongo
       MONGO_INITDB_ROOT_PASSWORD: mongo
     volumes:
-      - ./docker/mongodb-entrypoint.js:/docker-entrypoint-initdb.d/mongodb-entrypoint.js
-      - jc-customers-mongo:/data/db:delegated
+      - ./.setup/database/mongodb.entrypoint.js:/docker-entrypoint-initdb.d/mongodb-entrypoint.js
+      - nestjs-startkit:/data/db:delegated
 
     networks:
-      - jcpm-network
-  jc-customers:
+      - nestjs-startkit
+  nestjs-startkit:
     image: node:16-alpine
-    container_name: jc-customers
+    container_name: nest
     working_dir: /usr/src/app
     command: ["npm", "run", "start:debug"]
     expose:
@@ -28,11 +28,11 @@ services:
     volumes:
       - ./:/usr/src/app
     networks:
-      - jcpm-network
+      - nestjs-startkit
 networks:
-  jcpm-network:
+  nestjs-startkit:
     external: true
 
 volumes:
-  jc-customers-mongo:
+  nestjs-startkit:
     driver: local

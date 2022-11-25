@@ -2,15 +2,14 @@ FROM node:16-alpine as builder
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . .
-RUN npm install
+RUN npm install --ingore-scripts
 RUN npm run build
 
 FROM node:16-alpine as deps
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
-COPY . .
-ENV NODE_ENV=production
-RUN npm install
+COPY package.json .
+RUN npm install --omit=dev --ingore-scripts
 
 FROM node:16-alpine
 RUN apk update && apk add --upgrade apk-tools && apk upgrade --available
