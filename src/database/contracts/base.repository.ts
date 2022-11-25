@@ -1,4 +1,4 @@
-import { IRead, IWrite } from '@/database/contracts/repository.interface'
+import { IRead, IWrite } from '@app/database/contracts/repository.interface'
 
 export abstract class BaseRepository<T> implements IWrite<T>, IRead<T> {
   create(item: T): Promise<boolean> {

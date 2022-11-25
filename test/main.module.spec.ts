@@ -1,4 +1,4 @@
-import { MainModule } from '@/main.module'
+import { MainModule } from '@app/main.module'
 import { Test } from '@nestjs/testing'
 
 describe('MainModule', () => {

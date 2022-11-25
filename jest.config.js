@@ -1,8 +1,9 @@
 module.exports = {
   rootDir: '.',
+  testMatch: ['**/*.spec.ts', '**/*.e2e-spec.ts'],
   moduleNameMapper: {
-    '@/test/(.*)': '<rootDir>/test/$1',
-    '@/(.*)': '<rootDir>/src/$1'
+    '@test/(.*)$': '<rootDir>/test/$1',
+    '@app/(.*)$': '<rootDir>/src/$1'
   },
   moduleFileExtensions: ['ts', 'js', 'tsx', 'jsx'],
   preset: 'ts-jest',
@@ -23,5 +24,7 @@ module.exports = {
     '!<rootDir>/src/**/module.alias.{js,jsx,ts,tsx}',
     '!<rootDir>/src/**/*.*spec.{js,jsx,ts,tsx}'
   ],
-  clearMocks: true
+  clearMocks: true,
+  setupFiles: ['<rootDir>/test/setup.ts'],
+  setupFilesAfterEnv: ['<rootDir>/test/setup-after-env.ts']
 }

@@ -1,8 +1,8 @@
-import { CorrelationIdMiddleware } from '@/common/middlewares/correlation-id.middleware'
+import { CorrelationIdMiddleware } from '@app/common/middlewares/correlation-id.middleware'
 import { getMockReq, getMockRes } from '@jest-mock/express'
 import { Test } from '@nestjs/testing'
 import { NextFunction, Request, Response } from 'express'
-import { CORRELATION_ID_KEY } from '@/common/constants/common.constant'
+import { CORRELATION_ID_KEY } from '@app/common/constants/common.constant'
 
 describe('CorrelationIdMiddleware', () => {
   let req: Request

@@ -1,4 +1,4 @@
-import { CommonModule } from '@/common/common.module'
+import { CommonModule } from '@app/common/common.module'
 import { INestApplication } from '@nestjs/common'
 import { ConfigModule } from '@nestjs/config'
 import { Test, TestingModule, TestingModuleBuilder } from '@nestjs/testing'

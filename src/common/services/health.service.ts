@@ -1,4 +1,4 @@
-import { IHealthService } from '@/common/contracts/health-service.interface'
+import { IHealthService } from '@app/common/contracts/health-service.interface'
 import { Injectable } from '@nestjs/common'
 import { HealthCheckResult, HealthCheckService, HttpHealthIndicator } from '@nestjs/terminus'
 

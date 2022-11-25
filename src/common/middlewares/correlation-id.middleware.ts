@@ -1,4 +1,4 @@
-import { CORRELATION_ID_KEY } from '@/common/constants/common.constant'
+import { CORRELATION_ID_KEY } from '@app/common/constants/common.constant'
 import { Injectable, NestMiddleware } from '@nestjs/common'
 import { NextFunction, Request, Response } from 'express'
 import { v4 as uuidv4 } from 'uuid'

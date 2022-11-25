@@ -1,4 +1,4 @@
-import { TEntity } from '@/database/contracts/entity.types'
+import { TEntity } from '@app/database/contracts/entity.types'
 import { PrimaryGeneratedColumn, VersionColumn, CreateDateColumn, UpdateDateColumn, DeleteDateColumn } from 'typeorm'
 
 export abstract class BaseEntity implements TEntity {

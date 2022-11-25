@@ -1,6 +1,6 @@
 import './module.alias'
 import { NestFactory, Reflector } from '@nestjs/core'
-import { MainModule } from '@/main.module'
+import { MainModule } from '@app/main.module'
 import { ClassSerializerInterceptor, ValidationPipe, VersioningType } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
 import { DocumentBuilder, SwaggerDocumentOptions, SwaggerModule } from '@nestjs/swagger'

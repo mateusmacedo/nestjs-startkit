@@ -1,4 +1,4 @@
-import { databaseConfig } from '@/database/configs/database.config'
+import { databaseConfig } from '@app/database/configs/database.config'
 import { ConfigModule, ConfigService } from '@nestjs/config'
 import { Test, TestingModuleBuilder } from '@nestjs/testing'
 

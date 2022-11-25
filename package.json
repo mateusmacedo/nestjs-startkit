@@ -98,6 +98,7 @@
     "jest-sonar-reporter": "^2.0.0",
     "lint-staged": "^13.0.3",
     "mockdate": "^3.0.5",
+    "nock": "^13.2.9",
     "prettier": "^2.3.2",
     "source-map-support": "^0.5.20",
     "standard-version": "^9.5.0",

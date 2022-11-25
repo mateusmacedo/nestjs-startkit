@@ -1,4 +1,4 @@
-import { databaseConfig } from '@/database/configs/database.config'
+import { databaseConfig } from '@app/database/configs/database.config'
 import { Module } from '@nestjs/common'
 import { ConfigModule, ConfigService } from '@nestjs/config'
 import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm'

@@ -1,4 +1,4 @@
-import { BaseEntity } from '@/database/models/base.entity'
+import { BaseEntity } from '@app/database/models/base.entity'
 
 describe('BaseEntity', () => {
   class TestEntity extends BaseEntity {}

@@ -1,4 +1,4 @@
-CONTAINER_NAME=jc-customers
+CONTAINER_NAME=nestjs-startkit
 
 up:
 	docker-compose up -d

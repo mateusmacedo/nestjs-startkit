@@ -1,4 +1,4 @@
-import { TIdentity } from '@/database/contracts/entity.types'
+import { TIdentity } from '@app/database/contracts/entity.types'
 
 export interface IIdentityGenerator {
   generateIdentity(): TIdentity
