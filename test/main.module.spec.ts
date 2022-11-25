@@ -14,7 +14,7 @@ describe('MainModule', () => {
     mainModule = moduleRef.get<MainModule>(MainModule)
   })
 
-  it('should be defined', () => {
+  it('should be defined for dev', () => {
     expect(mainModule).toBeDefined()
   })
 })

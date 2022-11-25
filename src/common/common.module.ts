@@ -1,6 +1,6 @@
 import { HealthController } from '@/common/controller/health.controller'
 import { HealthService } from '@/common/service/health.service'
-import { appConfig } from '@/config/app.config'
+import { appConfig } from '@/common/config/app.config'
 import { HttpModule } from '@nestjs/axios'
 import { Module } from '@nestjs/common'
 import { ConfigModule } from '@nestjs/config'

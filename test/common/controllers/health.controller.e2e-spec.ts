@@ -12,7 +12,6 @@ describe('HealthController (e2e)', () => {
     const moduleBuilder: TestingModuleBuilder = Test.createTestingModule({
       imports: [
         ConfigModule.forRoot({
-          envFilePath: 'test.env',
           cache: true
         }),
         CommonModule

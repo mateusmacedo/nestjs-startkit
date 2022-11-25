@@ -1,4 +1,4 @@
-import { appConfig } from '@/config/app.config'
+import { appConfig } from '@/common/config/app.config'
 import { ConfigModule, ConfigService } from '@nestjs/config'
 import { Test, TestingModuleBuilder } from '@nestjs/testing'
 
@@ -10,7 +10,6 @@ describe('appConfig', () => {
     testingModuleBuilder = Test.createTestingModule({
       imports: [
         ConfigModule.forRoot({
-          envFilePath: 'test.env',
           expandVariables: true,
           cache: false
         }),
